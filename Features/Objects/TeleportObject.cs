@@ -60,9 +60,6 @@ public class TeleportObject : MonoBehaviour
 		
 		if(!target.TeleportedPickups.Contains(pickup.Serial)) 
 			target.TeleportedPickups.Add(pickup.Serial);
-		
-		Logger.Info($"Teleporting pickup {pickupBase.name} ({pickup.Serial}) to {target._mapEditorObject.Id}");
-
 
 		pickup.Position = target?.transform.position ?? pickup.Position;
 	}

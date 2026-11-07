@@ -14,10 +14,7 @@ public class TeleporterEventsHandler : CustomEventsHandler
     {
         foreach (var x in TeleportObject.List)
         {
-            if(x.TeleportedPickups.Remove(ev.Item.Serial))
-            {
-                Logger.Info($"Player {ev.Player.Nickname} picked up item {ev.Item.Serial}. Removed from teleported pickups.");
-            }
+            x.TeleportedPickups.Remove(ev.Item.Serial);
         }
     }
 
