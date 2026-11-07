@@ -57,6 +57,8 @@ public class GenericEventsHandler : CustomEventsHandler
 		});
 	}
 
+
+
 	public override void OnPlayerInteractingShootingTarget(PlayerInteractingShootingTargetEventArgs ev)
 	{
 		if (ev.ShootingTarget.GameObject.TryGetComponent(out MapEditorObject _))

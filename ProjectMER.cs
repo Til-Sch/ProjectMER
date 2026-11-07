@@ -34,6 +34,7 @@ public class ProjectMER : Plugin<Config>
 	public static string SchematicsDir { get; private set; }
 
 	public GenericEventsHandler GenericEventsHandler { get; } = new();
+	public TeleporterEventsHandler TeleporterEventsHandler { get; } = new();
 
 	public ToolGunEventsHandler ToolGunEventsHandler { get; } = new();
 
@@ -71,6 +72,7 @@ public class ProjectMER : Plugin<Config>
 
 		CustomHandlersManager.RegisterEventsHandler(GenericEventsHandler);
 		CustomHandlersManager.RegisterEventsHandler(ToolGunEventsHandler);
+		CustomHandlersManager.RegisterEventsHandler(TeleporterEventsHandler);
 		CustomHandlersManager.RegisterEventsHandler(AcionOnEventHandlers);
 		CustomHandlersManager.RegisterEventsHandler(PickupEventsHandler);
 
